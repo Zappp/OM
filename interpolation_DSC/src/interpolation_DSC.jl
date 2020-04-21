@@ -1,6 +1,6 @@
 module interpolation_DSC
 
-greet() = print("Hello World!")
+greet() = print("Hrld!")
 export greet
 
 end # module
