@@ -51,4 +51,29 @@ Załóżmy, że znamy wartości funkcji celu fa, fb i fc, w trzech
 kolejnych punktach xa, xb i xc odpowiednio, przy czym
 xa< xb<xc, to wykorzystując przyjęte na wstępie założenia, wie-
 lomian interpolacyjny Lagrange'a będzie miał postać:
+![](images/0.png)
+
+Jak wiadomo warunkiem koniecznym, a w naszym przypadku
+i dostatecznym istnienia w punkcie x, ekstremum wyrażenia
+jest warunek:
+
+![](images/1.png)
+
+a więc
+
+![](images/2.png)
+
+skąd:
+
+![](images/3.png)
+
+Poza wyprowadzonym wzorem na xm można także stosować
+inną jego postać zaproponowaną przez Daviesa, Swanna i Campeya, 
+a mianowicie:
+
+![](images/3.png)
+
+przy czym jest ona słuszna tylko w przypadku, gdy zachowane są
+równe odległości L pomiędzy bieżącymi punktami xa, xb, i xc
+w trakcie obliczeń.
 
