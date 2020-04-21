@@ -51,4 +51,5 @@ Załóżmy, że znamy wartości funkcji celu fa, fb i fc, w trzech
 kolejnych punktach xa, xb i xc odpowiednio, przy czym
 xa< xb<xc, to wykorzystując przyjęte na wstępie założenia, wie-
 lomian interpolacyjny Lagrange'a będzie miał postać:
-
+![](images/0.png)
+
