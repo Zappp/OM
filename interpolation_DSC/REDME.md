@@ -1,4 +1,4 @@
-5.1.2. Metoda interpolacji kwadratowej
+Metoda interpolacji kwadratowej
 
 Zaletą poprzednio omówionej metody jest duża prostota oraz
 bardzo dobra zbieżność uzyskiwana w każdej sytuacji, Wadą jej
