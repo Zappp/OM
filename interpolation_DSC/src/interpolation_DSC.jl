@@ -10,7 +10,7 @@ function rec_x(f, xp1k, s, p, n=1, xp2k=nothing)
     return rec_x(f, xnk, s, p, n + 1, xp1k)
 end
 
-function inpol_dsc(f, x0k, s=0.5, K=0.01, e=0.000001)
+function inpol_dsc(f, x0k, e=0.000001, s=0.5, K=0.01)
     xp1k = x0k - s
     xn1k = x0k + s
     f0k = f(x0k)
@@ -31,7 +31,7 @@ function inpol_dsc(f, x0k, s=0.5, K=0.01, e=0.000001)
             if s <= e
                 return x0kn1, f(x0kn1)
             else
-                inpol_dsc(f, x0kn1, s * K)
+                inpol_dsc(f, x0kn1,e ,s * K)
             end
         end
     end
@@ -49,7 +49,7 @@ function inpol_dsc(f, x0k, s=0.5, K=0.01, e=0.000001)
     if 2 ^ (n - 2) * s <= e
         return x0kn1, f(x0kn1)
     else
-        return inpol_dsc(f, x0kn1, s * K)
+        inpol_dsc(f, x0kn1, e,s * K)
     end
 end
 
