@@ -10,7 +10,7 @@ function rec_x(f, xp1k, s, p, n=1, xp2k=nothing)
     return rec_x(f, xnk, s, p, n + 1, xp1k)
 end
 
-function inpol_dsc(f, x0k, e=0.000001, s=0.5, K=0.01)
+function inpol_dsc(f, x0k, e=0.001, s=0.5, K=0.01)
     xp1k = x0k - s
     xn1k = x0k + s
     f0k = f(x0k)
