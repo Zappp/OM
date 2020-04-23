@@ -1,3 +1,7 @@
+# x0k -> starting point
+# e -> epsilon
+# s -> sigma
+
 module interpolation_DSC
 
 
@@ -10,7 +14,7 @@ function rec_x(f, xp1k, s, p, n=1, xp2k=nothing)
     return rec_x(f, xnk, s, p, n + 1, xp1k)
 end
 
-function inpol_dsc(f, x0k, e=0.001, s=0.5, K=0.01)
+function inpol_dsc(f, x0k, e, s=0.1, K=0.01)
     xp1k = x0k - s
     xn1k = x0k + s
     f0k = f(x0k)
@@ -46,7 +50,7 @@ function inpol_dsc(f, x0k, e=0.001, s=0.5, K=0.01)
         x0kn1 = xmk + (((2 ^ (n - 2)) * p * s * (f(xp1k) - f(xnk))) / (2 * (f(xp1k) - (2 * fmk) + f(xnk))))
     end
 
-    if 2 ^ (n - 2) * s <= e
+    if (2 ^ (n - 2)) * s <= e
         return x0kn1, f(x0kn1)
     else
         inpol_dsc(f, x0kn1, e,s * K)
