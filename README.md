@@ -1,4 +1,5 @@
 ### Course: Optimization methods
+# lab task: implement Davies, Swamp and Campey Algorithm
 ![](images/a.png)
 ![](images/b.png)
 ![](images/c.png)
